@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>নেছারাবাদ ব্লাড ডোনার ক্লাব</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts (Hind Siliguri) -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Hind Siliguri', sans-serif;
+        }
+        .hero-bg {
+            background: linear-gradient(rgba(185, 28, 28, 0.9), rgba(153, 27, 27, 0.95)), url('https://images.unsplash.com/photo-1615461066841-6116e61058f4?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 flex flex-col min-h-screen">
+
+    <!-- Header Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo & Brand Name -->
+                <div class="flex items-center space-x-3 space-x-reverse">
+                    <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                        <i class="fa-solid font-bold fa-droplet"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-xl sm:text-2xl font-bold text-red-600 leading-tight">নেছারাবাদ ব্লাড ডোনার ক্লাব</h1>
+                        <p class="text-xs text-slate-500 font-medium">স্বেচ্ছায় করি রক্তদান, গাই মানবতার জয়গান</p>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-6 space-x-reverse font-medium">
+                    <a href="#home" class="text-red-600 hover:text-red-700 transition">হোম</a>
+                    <a href="#donors" class="text-slate-600 hover:text-red-600 transition">রক্তদাতা খুঁজুন</a>
+                    <a href="#register" class="text-slate-600 hover:text-red-600 transition">রক্তদাতা হন</a>
+                    <a href="#info" class="text-slate-600 hover:text-red-600 transition">রক্তদানের তথ্য</a>
+                    <a href="#contact" class="text-slate-600 hover:text-red-600 transition">যোগাযোগ</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button id="menu-btn" class="md:hidden text-slate-600 focus:outline-none">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Drawer -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-slate-100 px-4 pt-2 pb-4 space-y-2 font-medium">
+            <a href="#home" class="block py-2 text-red-600">হোম</a>
+            <a href="#donors" class="block py-2 text-slate-600 hover:text-red-600">রক্তদাতা খুঁজুন</a>
+            <a href="#register" class="block py-2 text-slate-600 hover:text-red-600">রক্তদাতা হন</a>
+            <a href="#info" class="block py-2 text-slate-600 hover:text-red-600">রক্তদানের তথ্য</a>
+            <a href="#contact" class="block py-2 text-slate-600 hover:text-red-600">যোগাযোগ</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white py-20 px-4 sm:px-6 lg:px-8 text-center relative">
+        <div class="max-w-4xl mx-auto">
+            <span class="bg-red-800 text-red-100 text-sm px-4 py-1.5 rounded-full inline-block mb-4 font-semibold tracking-wide uppercase border border-red-500">জরুরী রক্ত সেবায় আমরা আপনার পাশে</span>
+            <h2 class="text-3xl sm:text-5xl font-extrabold mb-6 leading-tight">আপনার এক ব্যাগ রক্ত বাঁচাতে পারে একটি মুমূর্ষু প্রাণ</h2>
+            <p class="text-lg sm:text-xl text-red-100 mb-8 max-w-2xl mx-auto">নেছারাবাদ উপজেলা ও আশেপাশের এলাকায় নিরাপদ ও রক্তদান সেবা সহজ নিশ্চিত করতেই আমাদের এই উদ্যোগ।</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="#donors" class="bg-white text-red-600 hover:bg-red-50 px-8 py-3.5 rounded-lg font-bold text-lg shadow-lg transition duration-200">
+                    <i class="fa-solid fa-magnifying-glass mr-2"></i> রক্তদাতা খুঁজুন
+                </a>
+                <a href="#register" class="bg-red-800 hover:bg-red-900 border border-red-400 text-white px-8 py-3.5 rounded-lg font-bold text-lg shadow-lg transition duration-200">
+                    <i class="fa-solid fa-user-plus mr-2"></i> রক্তদাতা হিসেবে যুক্ত হন
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Search & Filter Section -->
+    <section id="donors" class="py-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex-grow w-full">
+        <div class="text-center mb-10">
+            <h3 class="text-3xl font-bold text-slate-900 mb-2">রক্তদাতা খুঁজুন</h3>
+            <p class="text-slate-600">আপনার প্রয়োজনীয় রক্তের গ্রুপ এবং এলাকা নির্বাচন করুন</p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-200 mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">রক্তের গ্রুপ</label>
+                    <select id="filter-group" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                        <option value="">সকল গ্রুপ</option>
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">ইউনিয়ন/এলাকা</label>
+                    <select id="filter-area" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                        <option value="">সকল এলাকা</option>
+                        <option value="স্বরূপকাঠি">স্বরূপকাঠি</option>
+                        <option value="সুটিয়াকাঠি">সুটিয়াকাঠি</option>
+                        <option value="কৌড়িখাড়া">কৌড়িখাড়া</option>
+                        <option value="জলাবাড়ী">জলাবাড়ী</option>
+                        <option value="দৈহারী">দৈহারী</option>
+                        <option value="গুয়ারেখা">গুয়ারেখা</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-2">স্ট্যাটাস</label>
+                    <select id="filter-status" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                        <option value="">সকল</option>
+                        <option value="ready">রক্তদানে প্রস্তুত</option>
+                        <option value="waiting">অপেক্ষমাণ</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Donors List -->
+        <div id="donor-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Dynamic Content loaded via JS -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="no-donors" class="hidden text-center py-12 bg-white rounded-2xl border border-slate-200">
+            <i class="fa-solid fa-user-slash text-4xl text-slate-400 mb-3"></i>
+            <p class="text-slate-600 text-lg font-medium">কোনো রক্তদাতা পাওয়া যায়নি</p>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="register" class="bg-slate-100 py-16 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-3xl mx-auto bg-white p-8 sm:p-10 rounded-2xl shadow-md border border-slate-200">
+            <div class="text-center mb-8">
+                <span class="text-red-600 text-3xl mb-2 inline-block"><i class="fa-solid fa-address-card"></i></span>
+                <h3 class="text-2xl sm:text-3xl font-bold text-slate-900">রক্তদাতা হিসেবে নিবন্ধন করুন</h3>
+                <p class="text-slate-600 mt-1">আপনার সামান্য তথ্য দিয়ে মানবসেবায় এগিয়ে আসুন</p>
+            </div>
+
+            <form id="registration-form" class="space-y-6">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">আপনার নাম *</label>
+                        <input type="text" id="reg-name" required placeholder="পূর্ণ নাম লিখুন" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">মোবাইল নম্বর *</label>
+                        <input type="tel" id="reg-phone" required placeholder="017xxxxxxxx" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">রক্তের গ্রুপ *</label>
+                        <select id="reg-group" required class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                            <option value="">নির্বাচন করুন</option>
+                            <option value="A+">A+</option>
+                            <option value="A-">A-</option>
+                            <option value="B+">B+</option>
+                            <option value="B-">B-</option>
+                            <option value="AB+">AB+</option>
+                            <option value="AB-">AB-</option>
+                            <option value="O+">O+</option>
+                            <option value="O-">O-</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-slate-700 mb-1">ইউনিয়ন / এলাকা *</label>
+                        <select id="reg-area" required class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                            <option value="">নির্বাচন করুন</option>
+                            <option value="স্বরূপকাঠি">স্বরূপকাঠি</option>
+                            <option value="সুটিয়াকাঠি">সুটিয়াকাঠি</option>
+                            <option value="কৌড়িখাড়া">কৌড়িখাড়া</option>
+                            <option value="জলাবাড়ী">জলাবাড়ী</option>
+                            <option value="দৈহারী">দৈহারী</option>
+                            <option value="গুয়ারেখা">গুয়ারেখা</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-semibold text-slate-700 mb-1">সর্বশেষ রক্তদানের তারিখ (যদি আগে দিয়ে থাকেন)</label>
+                    <input type="date" id="reg-last-date" class="w-full p-3 border border-slate-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:outline-none">
+                </div>
+
+                <button type="submit" class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3.5 px-6 rounded-lg shadow-md transition duration-200 text-lg">
+                    নিবন্ধন সম্পন্ন করুন
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Info Section -->
+    <section id="info" class="py-16 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12">
+            <h3 class="text-3xl font-bold text-slate-900 mb-2">রক্তদান সম্পর্কিত তথ্য</h3>
+            <p class="text-slate-600">রক্তদানের পূর্বে জেনে রাখা ভালো</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                    <i class="fa-solid fa-user-check"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">কে রক্ত দিতে পারবেন?</h4>
+                <p class="text-slate-600 text-sm">বয়স ১৮-৬০ বছর এবং ওজন সর্বনিম্ন ৪৫ কেজি হতে হবে। শারীরিক অসুস্থতা বা দীর্ঘমেয়াদী রোগ না থাকা আবশ্যক।</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">রক্তদানের বিরতি</h4>
+                <p class="text-slate-600 text-sm">প্রতিবার রক্তদানের পর অন্তত ৩ মাস (৯০ দিন) অপেক্ষা করতে হবে। নির্দিষ্ট সময় পরপর রক্তদান শরীরের জন্য নিরাপদ।</p>
+            </div>
+
+            <div class="bg-white p-6 rounded-2xl border border-slate-200 shadow-sm text-center">
+                <div class="w-16 h-16 bg-red-100 text-red-600 rounded-full flex items-center justify-center text-2xl mx-auto mb-4">
+                    <i class="fa-solid fa-heart-pulse"></i>
+                </div>
+                <h4 class="text-xl font-bold mb-2">স্বাস্থ্য উপকারিতা</h4>
+                <p class="text-slate-600 text-sm">নিয়মিত রক্তদানে হৃদরোগ ও স্ট্রোকের ঝুঁকি কমে এবং শরীরে নতুন লোহিত রক্তকণিকা তৈরিতে সাহায্য করে।</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4 flex items-center">
+                    <i class="fa-solid fa-droplet text-red-500 mr-2"></i> নেছারাবাদ ব্লাড ডোনার ক্লাব
+                </h4>
+                <p class="text-sm leading-relaxed text-slate-400">আমরা নেছারাবাদ (স্বরূপকাঠি) উপজেলার একটি স্বেচ্ছাসেবী ও অরাজনৈতিক সংগঠন। আমাদের লক্ষ্য জরুরি মুহূর্তে রোগীর জন্য নিরাপদ রক্ত সুনিশ্চিত করা।</p>
+            </div>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">জরুরী যোগাযোগ</h4>
+                <ul class="space-y-2 text-sm text-slate-400">
+                    <li><i class="fa-solid fa-location-dot text-red-500 mr-2"></i> নেছারাবাদ (স্বরূপকাঠি), পিরোজপুর</li>
+                    <li><i class="fa-solid fa-phone text-red-500 mr-2"></i> +৮৮০ ১৭০০-০০০০০০</li>
+                    <li><i class="fa-solid fa-envelope text-red-500 mr-2"></i> info@nesarabadbdc.org</li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white text-lg font-bold mb-4">সামাজিক যোগাযোগ মাধ্যম</h4>
+                <p class="text-sm text-slate-400 mb-4">আমাদের অফিশিয়াল ফেসবুক পেইজ ও গ্রুপে যুক্ত থাকুন:</p>
+                <div class="flex space-x-3 space-x-reverse">
+                    <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition"><i class="fa-solid fa-user-group"></i></a>
+                    <a href="#" class="w-10 h-10 bg-slate-800 hover:bg-red-600 text-white rounded-full flex items-center justify-center transition"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-6 text-center text-sm text-slate-500">
+            &copy; ২০২৬ নেছারাবাদ ব্লাড ডোনার ক্লাব। সর্বস্বত্ব সংরক্ষিত।
+        </div>
+    </footer>
+
+    <!-- JavaScript Logic -->
+    <script>
+        // Sample Initial Donor Data
+        let donors = [
+            { id: 1, name: "মোঃ আরিফুল ইসলাম", group: "A+", area: "সুটিয়াকাঠি", phone: "01711223344", lastDate: "2026-05-15" },
+            { id: 2, name: "সাকিব হাসান", group: "O+", area: "স্বরূপকাঠি", phone: "01822334455", lastDate: "2026-10-01" },
+            { id: 3, name: "মহিদুল ইসলাম", group: "B+", area: "কৌড়িখাড়া", phone: "01933445566", lastDate: "2026-02-10" },
+            { id: 4, name: "রাকিবুল আহসান", group: "AB+", area: "জলাবাড়ী", phone: "01544556677", lastDate: "" },
+            { id: 5, name: "তানভীর আহমেদ", group: "O-", area: "সুটিয়াকাঠি", phone: "01655667788", lastDate: "2026-04-20" }
+        ];
+
+        // Mobile Menu Toggle
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Function to Calculate Readiness (90-day rule)
+        function checkReadiness(lastDateStr) {
+            if (!lastDateStr) return { ready: true, text: "রক্তদানে প্রস্তুত", daysLeft: 0 };
+            
+            const lastDate = new Date(lastDateStr);
+            const today = new Date();
+            const diffTime = Math.abs(today - lastDate);
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+            
+            if (diffDays >= 90) {
+                return { ready: true, text: "রক্তদানে প্রস্তুত", daysLeft: 0 };
+            } else {
+                return { ready: false, text: `${90 - diffDays} দিন বাকি`, daysLeft: 90 - diffDays };
+            }
+        }
+
+        // Render Donors
+        function renderDonors() {
+            const donorContainer = document.getElementById('donor-list');
+            const noDonors = document.getElementById('no-donors');
+            const groupFilter = document.getElementById('filter-group').value;
+            const areaFilter = document.getElementById('filter-area').value;
+            const statusFilter = document.getElementById('filter-status').value;
+
+            donorContainer.innerHTML = '';
+
+            const filteredDonors = donors.filter(donor => {
+                const statusInfo = checkReadiness(donor.lastDate);
+                const isReady = statusInfo.ready;
+
+                const matchesGroup = !groupFilter || donor.group === groupFilter;
+                const matchesArea = !areaFilter || donor.area === areaFilter;
+                const matchesStatus = !statusFilter || 
+                                      (statusFilter === 'ready' && isReady) || 
+                                      (statusFilter === 'waiting' && !isReady);
+
+                return matchesGroup && matchesArea && matchesStatus;
+            });
+
+            if (filteredDonors.length === 0) {
+                noDonors.classList.remove('hidden');
+            } else {
+                noDonors.classList.add('hidden');
+                filteredDonors.forEach(donor => {
+                    const statusInfo = checkReadiness(donor.lastDate);
+                    
+                    const card = document.createElement('div');
+                    card.className = "bg-white p-6 rounded-2xl border border-slate-200 shadow-sm hover:shadow-md transition flex flex-col justify-between";
+                    
+                    card.innerHTML = `
+                        <div>
+                            <div class="flex justify-between items-start mb-4">
+                                <span class="bg-red-100 text-red-600 font-extrabold text-xl px-3.5 py-1 rounded-xl border border-red-200">${donor.group}</span>
+                                <span class="${statusInfo.ready ? 'bg-emerald-100 text-emerald-700 border-emerald-200' : 'bg-amber-100 text-amber-700 border-amber-200'} text-xs font-bold px-3 py-1 rounded-full border">
+                                    <i class="fa-solid ${statusInfo.ready ? 'fa-check-circle' : 'fa-clock'} mr-1"></i> ${statusInfo.text}
+                                </span>
+                            </div>
+                            <h4 class="text-xl font-bold text-slate-800 mb-1">${donor.name}</h4>
+                            <p class="text-slate-500 text-sm mb-4"><i class="fa-solid fa-location-dot text-slate-400 mr-1"></i> ${donor.area}</p>
+                        </div>
+                        <div class="pt-4 border-t border-slate-100 flex items-center justify-between">
+                            <span class="text-xs text-slate-400">সর্বশেষ রক্তদান: ${donor.lastDate || 'তথ্য নেই'}</span>
+                            <a href="tel:${donor.phone}" class="bg-red-600 hover:bg-red-700 text-white text-sm font-semibold px-4 py-2 rounded-lg flex items-center transition">
+                                <i class="fa-solid fa-phone mr-2 text-xs"></i> কল করুন
+                            </a>
+                        </div>
+                    `;
+                    donorContainer.appendChild(card);
+                });
+            }
+        }
+
+        // Add Event Listeners for Filters
+        document.getElementById('filter-group').addEventListener('change', renderDonors);
+        document.getElementById('filter-area').addEventListener('change', renderDonors);
+        document.getElementById('filter-status').addEventListener('change', renderDonors);
+
+        // Handle Registration Form Submit
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('reg-name').value;
+            const phone = document.getElementById('reg-phone').value;
+            const group = document.getElementById('reg-group').value;
+            const area = document.getElementById('reg-area').value;
+            const lastDate = document.getElementById('reg-last-date').value;
+
+            const newDonor = {
+                id: donors.length + 1,
+                name: name,
+                phone: phone,
+                group: group,
+                area: area,
+                lastDate: lastDate
+            };
+
+            donors.unshift(newDonor);
+            renderDonors();
+            this.reset();
+            alert('সফলভাবে নিবন্ধিত হয়েছে! তালিকায় আপনার নাম যুক্ত করা হয়েছে।');
+            document.getElementById('donors').scrollIntoView({ behavior: 'smooth' });
+        });
+
+        // Initial Render
+        renderDonors();
+    </script>
+</body>
+                  </html>
